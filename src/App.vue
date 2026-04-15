@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { computed, onMounted } from 'vue'
+import { computed } from 'vue'
 import { useI18n } from './i18n'
 import PortfolioView from './views/PortfolioView.vue'
 import { useAppStore } from './stores/app'
@@ -8,10 +8,6 @@ const { t } = useI18n()
 const appStore = useAppStore()
 
 const localeLabel = computed(() => (appStore.locale === 'en' ? 'RU' : 'EN'))
-
-onMounted(() => {
-  void appStore.hydrate()
-})
 </script>
 
 <template>
