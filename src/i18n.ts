@@ -17,5 +17,3 @@ export const i18n = createI18n<[MessageSchema], Locale>({
     ru,
   },
 })
-
-;(i18n.global.locale as any)
