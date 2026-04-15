@@ -1,5 +1,25 @@
-# Vue 3 + TypeScript + Vite
+# My Portfolio
 
-This template should help get you started developing with Vue 3 and TypeScript in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
+A personal resume website to showcase my background, skills, projects, and contact information in one place.
 
-Learn more about the recommended Project Setup and IDE Support in the [Vue Docs TypeScript Guide](https://vuejs.org/guide/typescript/overview.html#project-setup).
+## What This Site Includes
+
+- A short professional introduction
+- Skills and strengths
+- Selected projects and accomplishments
+- Work and/or education history
+- Contact details and relevant links
+
+## Purpose
+
+- Present my professional profile in a modern, web-friendly format
+- Keep key resume details accessible and up to date
+- Share one link that represents my work and experience
+
+## Deployment
+
+This website can be hosted on Github Pages.  
+
+## License
+
+This project is open for personal use and customization.
