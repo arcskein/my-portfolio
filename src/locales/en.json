@@ -1,0 +1,52 @@
+{
+  "brand": {
+    "label": "Alexander Vorvulev"
+  },
+  "nav": {
+    "home": "Home",
+    "about": "About",
+    "skills": "Skills",
+    "education": "Education",
+    "projects": "Projects",
+    "contact": "Contact"
+  },
+  "common": {
+    "viewProjects": "View projects",
+    "contactMe": "Contact me",
+    "github": "GitHub",
+    "liveDemo": "Live demo",
+    "previous": "Previous",
+    "next": "Next",
+    "download": "Download"
+  },
+  "hero": {
+    "eyebrow": "Backend Developer",
+    "name": "Alexander Vorvulev",
+    "role": "Java / Spring Boot / PostgreSQL",
+    "bio": "I design backend, REST API, and scalable architecture.",
+    "cta": "See selected projects"
+  },
+  "about": {
+    "title": "About Me",
+    "text": "I'm a beginner backend developer. I'm familiar with Java and Spring Boot. I enjoy designing services, thinking through application architecture, optimizing data processing, and making code understandable and easy to develop."
+  },
+  "skills": {
+    "title": "Skills",
+    "hard": "Hard Skills",
+    "soft": "Soft Skills"
+  },
+  "education": {
+    "title": "Education & Certificates"
+  },
+  "projects": {
+    "title": "Projects",
+    "subtitle": "Examples"
+  },
+  "contact": {
+    "title": "Contact",
+    "subtitle": "Open to backend development, API design, database engineering, and system architecture work."
+  },
+  "footer": {
+    "rights": "All rights not reserved."
+  }
+}
