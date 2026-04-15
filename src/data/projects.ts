@@ -29,7 +29,7 @@ const PROJECTS: Record<Locale, IProject[]> = {
       description: 'Minimal, responsive developer portfolio.',
       image: makePlaceholder('Portfolio'),
       techStack: ['TypeScript', 'Vue 3', 'Vite', 'i18n'],
-      githubUrl: 'https://github.com/yourname/portfolio',
+      githubUrl: 'https://github.com/arcskein/my-portfolio',
     },
     {
       id: 'java-friend-project',
@@ -54,7 +54,7 @@ const PROJECTS: Record<Locale, IProject[]> = {
       description: 'Минималистичное, адаптивное портфолио разработчика.',
       image: makePlaceholder('Портфолио'),
       techStack: ['TypeScript', 'Vue 3', 'Vite', 'i18n'],
-      githubUrl: 'https://github.com/yourname/portfolio',
+      githubUrl: 'https://github.com/arcskein/my-portfolio',
     },
     {
       id: 'java-friend-project',
