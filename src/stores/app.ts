@@ -20,7 +20,7 @@ export const useAppStore = defineStore('app', {
 
       this.locale = savedLocale ?? browserLocale
 
-      i18n.global.locale = this.locale
+      i18n.global.locale.value = this.locale
       document.documentElement.lang = this.locale
       document.documentElement.classList.add('dark')
       document.documentElement.style.colorScheme = 'dark'
@@ -31,7 +31,7 @@ export const useAppStore = defineStore('app', {
     setLocale(locale: Locale) {
       this.locale = locale
       localStorage.setItem('portfolio-locale', locale)
-      i18n.global.locale = locale
+      i18n.global.locale.value = locale
       document.documentElement.lang = locale
     },
 
