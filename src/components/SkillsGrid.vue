@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import type { ISkill } from '../types'
-import { useI18n } from 'vue-i18n'
+import { useI18n } from '../i18n'
 
 defineProps<{
   hardSkills: ISkill[]

@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { onMounted, ref } from 'vue'
-import { useI18n } from 'vue-i18n'
+import { useI18n } from '../i18n'
 import type { IProject } from '../types'
 
 const props = defineProps<{

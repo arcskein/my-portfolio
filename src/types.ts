@@ -41,6 +41,7 @@ export interface ILocaleMessage {
     contactMe: string
     github: string
     liveDemo: string
+    download: string
     previous: string
     next: string
   }

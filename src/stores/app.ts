@@ -1,9 +1,11 @@
 import { defineStore } from 'pinia'
-import { i18n } from '../i18n'
+import { loadLocale } from '../i18n'
 import type { Locale } from '../types'
 
-function normalizeLocale(value: string | null | undefined): Locale {
-  return value === 'ru' ? 'ru' : 'en'
+const LOCALE_STORAGE_KEY = 'portfolio-locale'
+
+function isLocale(value: string | null | undefined): value is Locale {
+  return value === 'en' || value === 'ru'
 }
 
 export const useAppStore = defineStore('app', {
@@ -14,13 +16,12 @@ export const useAppStore = defineStore('app', {
   }),
 
   actions: {
-    hydrate() {
-      const savedLocale = normalizeLocale(localStorage.getItem('portfolio-locale'))
-      const browserLocale = normalizeLocale(window.navigator.language.startsWith('ru') ? 'ru' : 'en')
-
-      this.locale = savedLocale ?? browserLocale
-
-      i18n.global.locale = this.locale
+    async hydrate() {
+      const savedLocale = localStorage.getItem(LOCALE_STORAGE_KEY)
+      const browserLocale: Locale = window.navigator.language.startsWith('ru') ? 'ru' : 'en'
+      const nextLocale: Locale = isLocale(savedLocale) ? savedLocale : browserLocale
+      this.locale = nextLocale
+      await loadLocale(nextLocale)
       document.documentElement.lang = this.locale
       document.documentElement.classList.add('dark')
       document.documentElement.style.colorScheme = 'dark'
@@ -28,15 +29,15 @@ export const useAppStore = defineStore('app', {
       this.hydrated = true
     },
 
-    setLocale(locale: Locale) {
+    async setLocale(locale: Locale) {
       this.locale = locale
-      localStorage.setItem('portfolio-locale', locale)
-      i18n.global.locale = locale
+      await loadLocale(locale)
+      localStorage.setItem(LOCALE_STORAGE_KEY, locale)
       document.documentElement.lang = locale
     },
 
-    toggleLocale() {
-      this.setLocale(this.locale === 'en' ? 'ru' : 'en')
+    async toggleLocale() {
+      await this.setLocale(this.locale === 'en' ? 'ru' : 'en')
     },
   },
 })
